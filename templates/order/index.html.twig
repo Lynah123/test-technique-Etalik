@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commandes{% endblock %}
+
+{% block body %}
+<section class="order">
+    <div class="container">
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{message}}
+        </div>
+    {% endfor %}
+        <h3 class="fw-bold mb-3 text-center">Liste des commandes</h3>
+        <p class="text-center mb-5">
+            Explorez la "Liste de Commandes" pour visualiser toutes les commandes enregistrées dans notre système. Cette page offre une vue complète de toutes les transactions effectuées, fournissant des détails tels que le numéro de commande, la date, le client, et bien plus encore.
+        </p>
+        <a class="btn btn-primary px-5 mb-5" href="{{ path('app_order_new') }}">Nouveau commande</a>
+
+       <div class="order-table">
+        <table class="table table-striped" id="order-table">
+            <thead>
+                <tr class="text-nowrap">
+                    <th>Id</th>
+                    <th>Compte Affaire</th>
+                    <th>Compte Evenement(Veh)</th>
+                    <th>Compte Dernier Evenement(Veh)</th>
+                    <th>Numero de Fiche</th>
+                    <th>Libellé Civilité</th>
+                    <th>Proprietaire Actuel du Vehicule</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Numero et Nom de la Voie</th>
+                    <th>Complement</th>
+                    <th>Code Postal</th>
+                    <th>Ville</th>
+                    <th>Téléphone Domicile</th>
+                    <th>Téléphone Portable</th>
+                    <th>Téléphone Job</th>
+                    <th>Email</th>
+                    <th>Date Mise en Circulation</th>
+                    <th>Date Achat(date de livraison)</th>
+                    <th>Date Dernier Evenement(Veh)</th>
+                    <th>Libellé Marque(Mrq)</th>
+                    <th>Libellé Modele(Mod)</th>
+                    <th>Version</th>
+                    <th>VIN</th>
+                    <th>Immatriculation</th>
+                    <th>Type de Prospect</th>
+                    <th>Kilométrage</th>
+                    <th>Libellé Energie(Energ)</th>
+                    <th>Vendeur VN</th>
+                    <th>Vendeur VO</th>
+                    <th>Commentaire de Facturation</th>
+                    <th>Type VN VO</th>
+                    <th>Numero de Dossier VN VO</th>
+                    <th>Intermediaire de Vente VN</th>
+                    <th>Date Evenement(Veh)</th>
+                    <th>Origine Evenement(Veh)</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for order in orders %}
+                <tr class="text-nowrap">
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.compteAffaire }}</td>
+                    <td>{{ order.compteEvenement }}</td>
+                    <td>{{ order.compteDernierEvenement }}</td>
+                    <td>{{ order.numeroFiche }}</td>
+                    <td>{{ order.libelleCivilite }}</td>
+                    <td>{{ order.proprietaireActuelVehicule }}</td>
+                    <td>{{ order.nom }}</td>
+                    <td>{{ order.prenom }}</td>
+                    <td>{{ order.numeroEtNomVoie }}</td>
+                    <td>{{ order.complement }}</td>
+                    <td>{{ order.codePostal }}</td>
+                    <td>{{ order.ville }}</td>
+                    <td>{{ order.telephoneDomicile }}</td>
+                    <td>{{ order.telephonePortable }}</td>
+                    <td>{{ order.telephoneJob }}</td>
+                    <td>{{ order.email }}</td>
+                    <td>{{ order.dateMiseCirculation ? order.dateMiseCirculation|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ order.dateAchat ? order.dateAchat|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ order.dateDernierEvenement ? order.dateDernierEvenement|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ order.libelleMarque }}</td>
+                    <td>{{ order.libelleModele }}</td>
+                    <td>{{ order.version }}</td>
+                    <td>{{ order.vin }}</td>
+                    <td>{{ order.immatriculation }}</td>
+                    <td>{{ order.typeProspect }}</td>
+                    <td>{{ order.kilometrage }}</td>
+                    <td>{{ order.libelleEnergie }}</td>
+                    <td>{{ order.vendeurVN }}</td>
+                    <td>{{ order.vendeurVO }}</td>
+                    <td>{{ order.commentaireFacturation }}</td>
+                    <td>{{ order.typeVNVO }}</td>
+                    <td>{{ order.numeroDossierVNVO }}</td>
+                    <td>{{ order.intermediaireVenteVN }}</td>
+                    <td>{{ order.dateEvenement ? order.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ order.origineEvenement }}</td>
+                    <td>
+                        <a href="{{ path('app_order_show', {'id': order.id}) }}" class="btn btn-secondary px-3">Voir</a>
+                        <a href="{{ path('app_order_edit', {'id': order.id}) }}" class="btn btn-primary px-3">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="37">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+       </div>
+    </div>
+</section>
+   
+
+{% endblock %}

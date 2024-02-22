@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification commande{% endblock %}
+
+{% block body %}
+<section class="edit-order">
+    <div class="container">
+        <h1 class="text-center fw-bold">Modification Commande</h1>
+        <p class="text-center mb-5">Modifiez les détails d'une commande existante sur cette page. Sélectionnez la commande à mettre à jour, apportez les modifications nécessaires et enregistrez pour appliquer les changements.</p>
+
+        {{ include('order/_form.html.twig', {'button_label': 'Modifier'}) }}
+    </div>
+</section>
+
+{% endblock %}
