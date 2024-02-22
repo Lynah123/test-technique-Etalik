@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Commande{% endblock %}
+
+{% block body %}
+<section class="order-new">
+    <div class="container">
+        <h1 class="fw-bold mb-3 text-center">Nouveau Commande</h1>
+        <p class="text-center mb-5">Cette page vous permet de créer rapidement de nouvelles commandes. Sélectionnez le client, ajoutez les produits et configurez les détails pour finaliser la commande.</p>
+
+        {{ include('order/_form.html.twig') }}
+    
+    </div>
+</section>
+    
+{% endblock %}

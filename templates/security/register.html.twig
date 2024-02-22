@@ -1,0 +1,63 @@
+{% extends 'security/base.html.twig' %}
+
+{% block title %}Admin Inscription{% endblock %}
+
+{% block body %}
+<section class="login-admin">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <h1 class="fw-bold mb-4 admin-title">Test Technique E-Talik</h1>
+                <p class="login-para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan, 
+                    quam in tristique malesuada, ex erat venenatis lectus, nec facilisis elit tortor vel sapien. 
+                    Nulla facilisi. Sed ac elit eu ligula euismod consectetur eu vel justo. 
+                    Proin a nisl a risus vestibulum ultricies. Integer aliquam felis eget enim finibus, 
+                    eu ultrices urna hendrerit. Mauris vel ligula vitae leo semper auctor. 
+                </p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="form-login shadow p-4">
+                    <h4 class="text-center text-white mb-4">Inscrivez-vous</h4>
+                    {{form_start(form)}}
+                    <div class="form-group mb-3">
+                        <label for="" class="mb-2">Nom</label>
+                        <span class="text-danger"> {{form_errors(form.firstName)}} </span>
+                        {{form_widget(form.firstName)}}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="" class="mb-2">Prénom(s)</label>
+                        <span class="text-danger"> {{form_errors(form.lastName)}} </span>
+                        {{form_widget(form.lastName)}}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="" class="mb-2">Adresse e-mail</label>
+                        <span class="text-danger"> {{form_errors(form.email)}} </span>
+                        {{form_widget(form.email)}}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="" class="mb-2">Mot de passe</label>
+                        <span class="text-danger"> {{form_errors(form.password)}} </span>
+                        {{form_widget(form.password)}}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="" class="mb-2">Confirmation mot de passe</label>
+                        <span class="text-danger"> {{form_errors(form.passwordConfirm)}} </span>
+                        {{form_widget(form.passwordConfirm)}}
+                    </div>
+                    <div class="text-center pt-1 mb-4 pb-1">
+                        <button class=" btn btn-primary mb-4 mt-4" type="submit" style="width: 100%;">
+                            Enregistrer
+                        </button>
+                    <div class="d-flex flex-wrap align-items-center justify-content-center pb-4">
+                        <p class="mb-0 me-2 compte">Vous avez un compte</p>
+                        <a style="font-size: 13px;" href="" class="btn btn-outline-primary text-white"> Se connecter </a>
+                      </div>
+                  {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

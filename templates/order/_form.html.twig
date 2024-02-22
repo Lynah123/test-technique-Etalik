@@ -1,0 +1,250 @@
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Compte Affaire</label>
+                {{form_widget(form.compteAffaire)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Compte Evenement(Veh)</label>
+                {{form_widget(form.compteEvenement)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Compte Dernier Evenement(Veh)</label>
+                {{form_widget(form.compteDernierEvenement)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Numero de Fiche</label>
+                {{form_widget(form.numeroFiche)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Libellé Civilité</label>
+                {{form_widget(form.libelleCivilite)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Proprietaire Actuel du Vehicule</label>
+                {{form_widget(form.proprietaireActuelVehicule)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Nom</label>
+                {{form_widget(form.nom)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Prénom</label>
+                {{form_widget(form.prenom)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Numero et Nom de la Voie</label>
+                {{form_widget(form.numeroEtNomVoie)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Complement</label>
+                {{form_widget(form.complement)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Code Postal</label>
+                {{form_widget(form.codePostal)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Ville</label>
+                {{form_widget(form.ville)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Téléphone Domicile</label>
+                {{form_widget(form.telephoneDomicile)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Télphone Portable</label>
+                {{form_widget(form.telephonePortable)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Télphone Job</label>
+                {{form_widget(form.telephoneJob)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Email</label>
+                {{form_widget(form.email)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Date Mise en Circulation</label>
+                {{form_widget(form.dateMiseCirculation)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Date Achat(date de livraison)</label>
+                {{form_widget(form.dateAchat)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Date Dernier Evenement(Veh)</label>
+                {{form_widget(form.dateDernierEvenement)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Libellé Marque(Mrq)</label>
+                {{form_widget(form.libelleMarque)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Libellé Modele(Mod)</label>
+                {{form_widget(form.libelleModele)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Version</label>
+                {{form_widget(form.version)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">VIN</label>
+                {{form_widget(form.vin)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Immatriculation</label>
+                {{form_widget(form.immatriculation)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Type de Prospect</label>
+                {{form_widget(form.typeProspect)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Kilométrages</label>
+                {{form_widget(form.kilometrage)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Libellé Energie(Energ)</label>
+                {{form_widget(form.libelleEnergie)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Vendeur VN</label>
+                {{form_widget(form.vendeurVN)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Vendeur VO</label>
+                {{form_widget(form.vendeurVO)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Commentaire de Facturation</label>
+                {{form_widget(form.commentaireFacturation)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Type VN VO</label>
+                {{form_widget(form.typeVNVO)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Numero de Dossier VN VO</label>
+                {{form_widget(form.numeroDossierVNVO)}}
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Intermediaire de Vente VN</label>
+                {{form_widget(form.intermediaireVenteVN)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Date Evenement(Veh)</label>
+                {{form_widget(form.dateEvenement)}}
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Origine Evenement(Veh)</label>
+                {{form_widget(form.origineEvenement)}}
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary px-4 mr-3">{{ button_label|default('Enregistrer') }}</button>
+    <a href="{{ path('app_order_index') }}" class="btn btn-secondary px-4 mx-3">Retour à la liste</a>
+
+{{ form_end(form) }}

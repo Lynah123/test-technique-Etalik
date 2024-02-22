@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Accueil!{% endblock %}
+
+{% block body %}
+<section class="dashboard" id="dashboard">
+    <div class="container">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="card shadow p-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique risus vel feugiat volutpat. Quisque vitae finibus arcu. Vivamus efficitur libero in justo varius vulputate. Aliquam sit amet luctus risus. Fusce eu ligula quam. Pellentesque in est id sapien blandit consequat. Sed varius euismod sapien, non egestas orci bibendum ut.</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="card shadow p-4">
+                    <p>Curabitur id commodo erat. Integer ut sagittis lacus. Morbi sagittis libero vel odio tincidunt, non feugiat purus volutpat. In hac habitasse platea dictumst. Duis eget turpis tincidunt, commodo justo id, feugiat eros. Nullam fringilla scelerisque velit, nec tincidunt quam commodo eu. Nam vel volutpat odio.</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="card shadow p-4">
+                    <p>Quisque bibendum, justo nec fermentum suscipit, mi augue facilisis sapien, in imperdiet felis quam eget lacus. Ut rhoncus est id libero venenatis, a dictum nisl auctor. Nam vel libero sit amet ligula lacinia commodo a ut felis. Sed in tristique neque. Fusce sed nunc vel quam tincidunt pellentesque. Proin accumsan hendrerit commodo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

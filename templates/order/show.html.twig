@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+<section class="order-show">
+    <div class="container">
+        <h1 class="text-center fw-bold">Commande</h1>
+        <p class="text-center mb-5">Consultez les détails de la commande sur cette page. Explorez les informations telles que les articles inclus, la date de commande, et d'autres détails pertinents.</p>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ order.id }}</td>
+                </tr>
+                <tr>
+                    <th>Compte Affaire</th>
+                    <td>{{ order.compteAffaire }}</td>
+                </tr>
+                <tr>
+                    <th>Compte Evenement</th>
+                    <td>{{ order.compteEvenement }}</td>
+                </tr>
+                <tr>
+                    <th>Compte Dernier Evenement(Veh)</th>
+                    <td>{{ order.compteDernierEvenement }}</td>
+                </tr>
+                <tr>
+                    <th>Numero de Fiche</th>
+                    <td>{{ order.numeroFiche }}</td>
+                </tr>
+                <tr>
+                    <th>Libellé Civilité</th>
+                    <td>{{ order.libelleCivilite }}</td>
+                </tr>
+                <tr>
+                    <th>Proprietaire Actuel du Vehicule</th>
+                    <td>{{ order.proprietaireActuelVehicule }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ order.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Prenom</th>
+                    <td>{{ order.prenom }}</td>
+                </tr>
+                <tr>
+                    <th>Numero Et Nom de la Voie</th>
+                    <td>{{ order.numeroEtNomVoie }}</td>
+                </tr>
+                <tr>
+                    <th>Complement</th>
+                    <td>{{ order.complement }}</td>
+                </tr>
+                <tr>
+                    <th>Code Postal</th>
+                    <td>{{ order.codePostal }}</td>
+                </tr>
+                <tr>
+                    <th>Ville</th>
+                    <td>{{ order.ville }}</td>
+                </tr>
+                <tr>
+                    <th>Téléphone Domicile</th>
+                    <td>{{ order.telephoneDomicile }}</td>
+                </tr>
+                <tr>
+                    <th>Téléphone Portable</th>
+                    <td>{{ order.telephonePortable }}</td>
+                </tr>
+                <tr>
+                    <th>Téléphone Job</th>
+                    <td>{{ order.telephoneJob }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ order.email }}</td>
+                </tr>
+                <tr>
+                    <th>Date Mise en Circulation</th>
+                    <td>{{ order.dateMiseCirculation ? order.dateMiseCirculation|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Date Achat(date de livraison)</th>
+                    <td>{{ order.dateAchat ? order.dateAchat|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Date de Dernier Evenement</th>
+                    <td>{{ order.dateDernierEvenement ? order.dateDernierEvenement|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Libellé Marque</th>
+                    <td>{{ order.libelleMarque }}</td>
+                </tr>
+                <tr>
+                    <th>Libellé Modele</th>
+                    <td>{{ order.libelleModele }}</td>
+                </tr>
+                <tr>
+                    <th>Version</th>
+                    <td>{{ order.version }}</td>
+                </tr>
+                <tr>
+                    <th>Immatriculation</th>
+                    <td>{{ order.immatriculation }}</td>
+                </tr>
+                <tr>
+                    <th>Type de Prospect</th>
+                    <td>{{ order.typeProspect }}</td>
+                </tr>
+                <tr>
+                    <th>Kilométrage</th>
+                    <td>{{ order.kilometrage }}</td>
+                </tr>
+                <tr>
+                    <th>Libellé Energie</th>
+                    <td>{{ order.libelleEnergie }}</td>
+                </tr>
+                <tr>
+                    <th>Vendeur VN</th>
+                    <td>{{ order.vendeurVN }}</td>
+                </tr>
+                <tr>
+                    <th>Vendeur VO</th>
+                    <td>{{ order.vendeurVO }}</td>
+                </tr>
+                <tr>
+                    <th>Commentaire de Facturation</th>
+                    <td>{{ order.commentaireFacturation }}</td>
+                </tr>
+                <tr>
+                    <th>Type VN VO</th>
+                    <td>{{ order.typeVNVO }}</td>
+                </tr>
+                <tr>
+                    <th>Numero de Dossier VN VO</th>
+                    <td>{{ order.numeroDossierVNVO }}</td>
+                </tr>
+                <tr>
+                    <th>Intermediaire de Vente VN</th>
+                    <td>{{ order.intermediaireVenteVN }}</td>
+                </tr>
+                <tr>
+                    <th>Date d'Evenement</th>
+                    <td>{{ order.dateEvenement ? order.dateEvenement|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Origine Evenement</th>
+                    <td>{{ order.origineEvenement }}</td>
+                </tr>
+                <tr>
+                    <th>Vin</th>
+                    <td>{{ order.vin }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_order_edit', {'id': order.id}) }}" class="btn btn-primary px-4 my-4">Modifier</a>
+    
+        <a href="{{ path('app_order_index') }}" class="btn btn-secondary px-4 my-4 mx-3">Retour à la liste</a>
+    
+    
+        {{ include('order/_delete_form.html.twig') }}
+    </div>
+</section>
+   
+{% endblock %}
